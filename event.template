@@ -1,0 +1,15 @@
+{
+    "Event":
+    {
+        "event_id":XXXX,
+        "begin_at":"yyyy-mm-ddThh:mm:ssZ",
+        "end_at":"yyyy-mm-ddThh:mm:ssZ",
+        "zone_id":X,
+        "kind":1,
+        "number_of_places":null,
+        "event_template_id":XXX,
+        "number_of_places_reserved":XX
+    },
+    "is_subscribed":true/false
+}
+w
