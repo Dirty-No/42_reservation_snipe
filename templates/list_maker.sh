@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 #good luck figuring out how this works cause im too lazy to explain it
 
