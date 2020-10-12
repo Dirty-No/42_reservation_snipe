@@ -18,10 +18,8 @@ done <<< "$(cat "$1" | sed '/^$/d')"
 COND="true"
 
 while [ "$COND" = "true" ];do
-echo "loop" "$COND"
     for count in $(seq 0 $size | tr '\n' ' ')
     do
-    echo count $count
         if [ "${bool_array[$count]}" = "false" ];
         then
             RETURNED=$(./subscribe_from_date.sh "${sub_array[$count]}" "$2" | tee /dev/tty )
