@@ -3,6 +3,8 @@
 #ARG 1 == sublist file
 #ARG 2 == floor (E1,E2,E3,TDM) (optional)
 
+FORCE=true
+
 declare -A sub_array
 declare -A bool_array
 
@@ -17,10 +19,20 @@ done <<< "$(cat "$1" | sed '/^$/d')"
 
 COND="true"
 
+
+while $FORCE;do
+    for count in $(seq 0 $size | tr '\n' ' ')
+    do
+            ./subscribe_from_date.sh "${sub_array[$count]}" "$2" &
+done
+exit
+done
+
+
 while [ "$COND" = "true" ];do
     for count in $(seq 0 $size | tr '\n' ' ')
     do
-        if [ "${bool_array[$count]}" = "false" ];
+        if $FORCE || [ "${bool_array[$count]}" = "false" ];
         then
             RETURNED=$(./subscribe_from_date.sh "${sub_array[$count]}" "$2" | tee /dev/tty )
             bool_array[$count]=$(echo "$RETURNED" | grep false\true)

@@ -40,4 +40,4 @@ then
 	#echo "$SLOTS_LIST"
 fi
 
-echo "$SLOTS_LIST" | sed "s/$(date +"%Y")-//g" | grep -Eo event_id\":[0-9][0-9][0-9][0-9] | sed 's/event_id\"://g'
+echo "$SLOTS_LIST" | sed "s/$(date +"%Y")-//g" | grep -Eo event_id\":[0-9][0-9][0-9][0-9][0-9] | sed 's/event_id\"://g'

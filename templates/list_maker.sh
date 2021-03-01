@@ -5,7 +5,7 @@
 YEAR=$(printf "%.4d" "$1")
 MONTH=$(printf "%.2d" "$2")
 DAYS=$(echo "${@:3}" | tr ' ' '\n')
-TEMPLATE_FILE="subcriptions.template"
+TEMPLATE_FILE="subscriptions.template"
 LIST_FILE="sublist"
 echo "" > "$LIST_FILE"
 echo "$DAYS" | while read line ; do
