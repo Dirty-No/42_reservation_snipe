@@ -8,7 +8,7 @@
 START_DATE="0"
 END_DATE="2147483647"
  # getting all reservation slots, this will  die on 03:14:07 UTC on 19 January 2038, a.k.a Epochalypse
-SLOT_LIST=$(curl -s -b cookies.txt "https://reservation.42network.org/api/me/events?begin_at=$START_DATE&end_at=$END_DATE" \
+SLOT_LIST=$(curl -S -s -b cookies.txt "https://reservation.42network.org/api/me/events?begin_at=$START_DATE&end_at=$END_DATE" \
   -H 'Connection: keep-alive' \
   -H 'Accept: application/json, text/plain, */*' \
   -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36' \

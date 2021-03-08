@@ -3,7 +3,7 @@
 #ARG 1 == sublist file
 #ARG 2 == floor (E1,E2,E3,TDM) (optional)
 
-FORCE=true
+FORCE=false
 
 declare -A sub_array
 declare -A bool_array

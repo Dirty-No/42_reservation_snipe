@@ -3,7 +3,7 @@
 #   ZONE 2 == E1
 #   ZONE 5 == TDM
 
-SLOT_LIST=$(curl -b cookies.txt 'https://reservation.42network.org/api/me/events?begin_at=1601251200&end_at=1602460800' \
+SLOT_LIST=$(curl -S -b cookies.txt 'https://reservation.42network.org/api/me/events?begin_at=1601251200&end_at=1602460800' \
   -H 'Connection: keep-alive' \
   -H 'Accept: application/json, text/plain, */*' \
   -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36' \

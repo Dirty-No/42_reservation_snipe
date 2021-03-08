@@ -2,7 +2,7 @@
 
 #ARG 1 event id
 
-curl -b cookies.txt "https://reservation.42network.org/api/me/events/$1" \
+curl -S -b cookies.txt "https://reservation.42network.org/api/me/events/$1" \
   -X 'POST' \
   -H 'Connection: keep-alive' \
   -H 'Content-Length: 0' \

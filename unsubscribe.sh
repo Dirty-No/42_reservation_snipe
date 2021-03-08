@@ -3,7 +3,7 @@
 #7651
 #ARG 1 event id
 
-curl -b cookies.txt "https://reservation.42network.org/api/me/events/$1" \
+curl -S -b cookies.txt "https://reservation.42network.org/api/me/events/$1" \
   -X 'DELETE' \
   -H 'Connection: keep-alive' \
   -H 'Accept: application/json, text/plain, */*' \
